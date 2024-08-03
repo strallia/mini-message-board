@@ -6,11 +6,13 @@ const messages = [
     text: "Hi there!",
     user: "Amando",
     added: new Date(),
+    id: crypto.randomUUID(),
   },
   {
     text: "Hello World!",
     user: "Charles",
     added: new Date(),
+    id: crypto.randomUUID(),
   },
 ];
 
@@ -25,8 +27,14 @@ router.get("/new", (req, res) => {
 
 router.post("/new", (req, res) => {
   const { text, user } = req.body;
-  messages.push({ text, user, added: new Date() });
+  messages.push({ text, user, added: new Date(), id: crypto.randomUUID() });
   res.redirect("/");
+});
+
+router.get("/message/:id", (req, res) => {
+  const messageID = req.params.id;
+  const message = messages.find((message) => message.id === messageID);
+  res.render("message", { message });
 });
 
 module.exports = router;

@@ -11,6 +11,7 @@
       <p><%= message.user %></p>
       <p><%= message.text %></p>
       <p><%= message.added %></p>
+      <a href="/message/<%= message.id %>">Open</a>
     </div>
     <% }); %>
     <a href="/new">Add a message</a>
