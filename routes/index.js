@@ -15,12 +15,18 @@ const messages = [
 ];
 
 router.get("/", (req, res) => {
-  console.log("Recieved GET request at /");
+  console.log("Received GET request at /");
   res.render("index", { title: "Mini Message Board", messages });
 });
 
 router.get("/new", (req, res) => {
   res.render("form");
+});
+
+router.post("/new", (req, res) => {
+  const { text, user } = req.body;
+  messages.push({ text, user, added: new Date() });
+  res.redirect("/");
 });
 
 module.exports = router;

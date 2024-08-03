@@ -8,6 +8,9 @@ const app = express();
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
+// App level middleware
+app.use(express.urlencoded({ extended: true }));
+
 // Set routers
 app.use("/", indexRouter);
 
