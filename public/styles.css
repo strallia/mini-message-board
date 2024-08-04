@@ -12,6 +12,7 @@
   --dark-grey: #757179;
   --black: #0e0f23;
   font-size: 16px;
+  font-family: serif;
 }
 
 body {
@@ -61,20 +62,26 @@ main {
   gap: 10px;
 }
 
-a {
+a,
+form button {
   text-decoration: none;
   padding: 5px;
   border-radius: 5px;
 }
 
-main a {
+main a,
+form button {
   color: var(--dark-grey);
   background-color: var(--light-lavender);
   box-shadow: 0 0 5px var(--light-grey);
   height: min-content;
+  padding: 5px 10px;
+  font-family: inherit;
+  font-size: inherit;
 }
 
-main a:hover {
+main a:hover,
+form button:hover {
   background-color: var(--dark-lavender);
   color: var(--white);
 }
@@ -83,4 +90,15 @@ main a:hover {
 .added {
   color: var(--dark-grey);
   font-size: 0.8rem;
+}
+
+input {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid var(--dark-lavender);
+}
+
+form button {
+  border: none;
+  cursor: pointer;
 }

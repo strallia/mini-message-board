@@ -3,20 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles.css" />
     <title>Create Message</title>
   </head>
   <body>
-    <form method="POST" action="/new">
-      <header>Create a New Message</header>
-      <label for="user">
-        Your Name:
-        <input id="user" name="user" type="text" />
-      </label>
-      <label for="text">
-        Your Message:
-        <input id="text" name="text" type="text"
-      /></label>
-      <button type="submit">Submit</button>
-    </form>
+    <%- include("header") %>
+    <main>
+      <form method="POST" action="/new" class="card">
+        <section>
+          <h4>Create a New Message</h4>
+          <label for="user">
+            Name:
+            <input id="user" name="user" type="text" />
+          </label>
+          <label for="text">
+            Message:
+            <input id="text" name="text" type="text"
+          /></label>
+        </section>
+        <button type="submit">Submit</button>
+      </form>
+    </main>
   </body>
 </html>
