@@ -10,6 +10,7 @@ app.set("view engine", "ejs");
 
 // App level middleware
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, "public")));
 
 // Set routers
 app.use("/", indexRouter);

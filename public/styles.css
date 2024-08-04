@@ -1,0 +1,40 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --white: #fff;
+  --light-grey: #e6e5e7;
+  --dark-lavender: #b6b6d5;
+  --light-lavender: #e9e3f1;
+  --dark-grey: #757179;
+  --black: #0e0f23;
+}
+
+body {
+  background-color: var(--light-grey);
+  display: grid;
+}
+
+header {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  align-items: center;
+}
+
+main {
+  padding: 10px;
+  padding-top: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.card {
+  background-color: var(--white);
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 0 2px var(--dark-grey);
+}
