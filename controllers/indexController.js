@@ -1,3 +1,5 @@
+const crypto = require("crypto");
+
 const messages = [
   {
     text: "Hi there!",
