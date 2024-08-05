@@ -1,6 +1,6 @@
 # Mini Message Board
 
-<!-- [Live Demo]() -->
+[Live Demo](https://mini-message-board-production-bc77.up.railway.app/)
 
 ## Purpose
 
