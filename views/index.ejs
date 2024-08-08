@@ -14,7 +14,7 @@
         <section>
           <p class="text"><%= message.text %></p>
           <p class="name">
-            by <% const user = message.user || "Anonymous" %> <%= user %>
+            by <% const name = message.name || "Anonymous" %> <%= name %>
           </p>
           <%- include("added", {message}) %>
         </section>

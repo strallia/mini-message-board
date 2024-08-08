@@ -12,7 +12,9 @@
       <div class="card">
         <section>
           <p class="text"><%= message.text %></p>
-          <p class="name">By: <%= message.user %></p>
+          <p class="name">
+            by <% const name = message.name || "Anonymous" %> <%= name %>
+          </p>
           <%- include("added") %>
         </section>
         <a href="/">Go back</a>

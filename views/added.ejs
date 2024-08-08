@@ -1,8 +1,8 @@
 <p class="added">
   <% const months =
   ["January","February","March","April","May","June","July","August","September","October","November","December"];
-  const date = message.added; const month = months[date.getMonth()]; const day =
-  date.getDate(); const year = date.getFullYear(); const hour = date.getHours();
-  const minute = date.getMinutes();%> <%= month %> <%= day %>, <%= year %> at
-  <%= hour %>:<%= minute %>
+  const date = new Date(message.added); const month = months[date.getMonth()];
+  const day = date.getDate(); const year = date.getFullYear(); const hour =
+  date.getHours(); const minute = date.getMinutes();%> <%= month %> <%= day %>,
+  <%= year %> at <%= hour %>:<%= minute %>
 </p>
