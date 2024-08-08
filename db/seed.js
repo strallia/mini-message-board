@@ -1,8 +1,6 @@
 const { Client } = require("pg");
 require("dotenv").config();
 
-const { HOST, USER, DATABASE, PASSWORD, DB_PORT } = process.env;
-
 const SQL = `
   CREATE TABLE messages (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -20,16 +18,17 @@ const SQL = `
 const seedDB = async () => {
   console.log("seeding db...");
   const client = new Client({
-    host: HOST,
-    user: USER,
-    database: DATABASE,
-    password: PASSWORD,
-    port: DB_PORT,
+    // Seeds the local database.
+    connectionString: process.env.DATABASE_URL,
   });
-  await client.connect();
-  await client.query(SQL);
-  await client.end();
-  console.log("done seeding");
+  try {
+    await client.connect();
+    await client.query(SQL);
+    await client.end();
+    console.log("done seeding");
+  } catch (e) {
+    console.error("Error seeding db:", e);
+  }
 };
 
 seedDB();
