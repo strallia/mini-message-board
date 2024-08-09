@@ -102,3 +102,7 @@ form button {
   border: none;
   cursor: pointer;
 }
+
+header a {
+  color: var(--black);
+}
