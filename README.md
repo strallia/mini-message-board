@@ -4,6 +4,6 @@
 
 ## Purpose
 
-- Pratice implementing the VC part of the MVC design pattern using Express.js, EJS, and node.js.
+- Pratice implementing the MVC design pattern using Express.js, EJS, and node.js.
 - Practice deployment of an app and database onto a PaaS.
 - Add data persistence with PostgreSQL and node-postgres.
